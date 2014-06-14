@@ -1,0 +1,15 @@
+<?php
+$crlf = chr(13) . chr(10);
+$d_quote = chr(34);
+foreach($_GET as $variable => $value) {
+  $$variable = $value;
+}  
+foreach($_POST as $variable => $value) {
+  $$variable = $value;
+}
+$PHP_AUTH_USER = $_SERVER['PHP_AUTH_USER'];
+$PHP_AUTH_PW = $_SERVER['PHP_AUTH_PW'];
+$PHP_SELF = $_SERVER['PHP_SELF'];
+$REMOTE_ADDR = $_SERVER['REMOTE_ADDR'];
+$cgi = $_SERVER['PHP_SELF'];
+?>
